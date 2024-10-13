@@ -17,3 +17,9 @@ def get_connectome(timeseries: np.ndarray,
         raise NotImplementedError
 
     return conn
+
+def extract_upper_triangular(matrix):
+    return matrix[np.triu_indices_from(matrix, k=1)]
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
